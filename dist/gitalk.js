@@ -2248,7 +2248,8 @@ var isElementAnSFC = exports.isElementAnSFC = function isElementAnSFC(element) {
     return false;
   }
 
-  return !element.type.prototype.isReactComponent;
+  // linkji: 暴力修复BUG 
+  return true;
 };
 function omit(obj) {
   var attrs = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
